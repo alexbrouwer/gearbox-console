@@ -1,0 +1,32 @@
+{
+    "name": "gearbox/console",
+    "description": "Gearbox console application",
+    "version": "1.0.0",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Gearbox\\": "src/Gearbox/"
+        }
+    },
+    "bin": ["bin/console.php", "bin/console"],
+    "config": {
+        "bin-dir": "bin"
+    },
+    "require": {
+        "zendframework/zend-servicemanager": "^3.0",
+        "zendframework/zend-eventmanager": "^3.0",
+        "zendframework/zend-stdlib": "^3.0",
+        "zendframework/zend-modulemanager": "^2.7",
+        "zendframework/zend-config": "^2.6",
+        "zendframework/zend-loader": "^2.5",
+        "zendframework/zend-validator": "^2.7",
+        "zendframework/zend-filter": "^2.7",
+        "zendframework/zend-hydrator": "^2.2",
+        "symfony/console": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.3",
+        "mockery/mockery": "^0.9.4",
+        "symfony/var-dumper": "^3.0"
+    }
+}
