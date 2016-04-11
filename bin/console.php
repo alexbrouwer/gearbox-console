@@ -6,6 +6,9 @@
  * to the application root now.
  */
 chdir(dirname(__DIR__));
+if(preg_match('/^(.+)\/vendor\/.+/', getcwd(), $matches)) {
+    chdir($matches[1]);
+}
 
 // Setup autoloading
 if (file_exists('vendor/autoload.php')) {
@@ -17,4 +20,4 @@ if (!class_exists('Gearbox\Console\Application')) {
 }
 
 // Run the application!
-Gearbox\Console\Application::init(require 'config/application.php')->run();
+Gearbox\Console\Application::init(require 'config/application.config.php')->run();
